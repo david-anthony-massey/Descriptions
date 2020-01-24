@@ -13,5 +13,3 @@ CREATE TABLE productDescription (
   category_id int,
   imgUrls text
 );
-
-	INSERT INTO [table name] (Host, User, Password) VALUES('%','user',PASSWORD('password'));
