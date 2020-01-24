@@ -4,7 +4,7 @@ const port = 3000
 const path = require("path");
 
 
-app.use(express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join(__dirname, "/../client/dist")));
 
 app.get('/', (req, res) => res.send('Hello, from the server!'))
 
