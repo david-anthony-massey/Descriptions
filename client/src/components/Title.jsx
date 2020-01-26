@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Title = (props) => {
+  console.log('This is from the tittle; ', props.data)
   return (
     <div>
-      <h4>This will be the Product Title</h4>
+      <div>Trying to render data</div>
     </div>
   )
 }

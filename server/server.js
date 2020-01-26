@@ -8,12 +8,18 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
-
-
 app.use(express.static(path.join(__dirname, "/../client/dist")));
 
-//app.get('/', (req, res) => res.send('Hello, from the server!'))
+// get request using getProductTask
+app.get('/product', function (req, res) {
+  db.sendProductTask((err, results) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(results);
+      res.end()
+    }
+  })
+});
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
