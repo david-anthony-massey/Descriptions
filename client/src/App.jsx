@@ -1,6 +1,7 @@
 import React from "react";
 import Title from './components/Title.jsx';
-import Description from './components/Descriptions.jsx'
+import Description from './components/Descriptions.jsx';
+import Price from './components/Price.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -9,22 +10,25 @@ class App extends React.Component {
     this.state = {
       currentItem: {},
       title: [],
-      //description: []
+      description: [],
+      price: []
     };
-    this.getDescription = this.getDescription.bind(this);
+    this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
 
   componentDidMount() {
-    this.getDescription()
+    this.getDescriptionInfo()
   }
 
-  getDescription () {
+  // GET request for product info from the db
+  getDescriptionInfo () {
     axios.get('/product')
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
         title: response.data,
-        //descriptions: response.data
+        description: response.data,
+        price: response.data
       })
     })
     .catch(function (error) {
@@ -35,15 +39,17 @@ class App extends React.Component {
   render() {
     return (
       <div>
-       <Title title={this.state.title}/>
-       <h5>by Test Info</h5>
-       <div>* Rating System * 91 ratings | 4 answered questions</div>
-       ___________________________________________________________ <br/><br/>
-      <div>
-      Price: $<span style={{color: "red"}}>{34.01}</span> & FREE Shipping. Details & FREE Returns
-      </div>
-        <br/><br/>
-       <Description />
+        <Title title={this.state.title}/>
+        <h5>by Test Info</h5>
+        <div>* Rating System * 91 ratings | 4 answered questions</div>
+        ___________________________________________________________ <br/><br/>
+        <div>
+          <Price price={this.state.price}/>
+        </div>
+          <br/><br/>
+        <div>
+          <Description description={this.state.description}/>
+        </div>
       </div>
     )
   }
