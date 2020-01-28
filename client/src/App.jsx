@@ -6,6 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentItem: {},
       title: []
     };
     this.getDescription = this.getDescription.bind(this);
@@ -20,7 +21,6 @@ class App extends React.Component {
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
-        currentItem: {},
         title: response.data
       })
     })
