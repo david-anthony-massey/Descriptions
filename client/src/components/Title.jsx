@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Title = (props) => {
-  // console.log('This is from the tittle; ', props)
   return (
     <div>
     Product Name

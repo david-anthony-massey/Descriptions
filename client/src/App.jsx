@@ -21,6 +21,7 @@ class App extends React.Component {
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
+        rating: 1,
         title: response.data
       })
     })
@@ -34,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
        <Title title={this.state.title}/>
-       <h5>Test Info</h5>
+       <h5>by Test Info</h5>
        <div>* Rating System * 91 ratings | 4 answered questions</div>
        ___________________________________________________________ <br/><br/>
 
