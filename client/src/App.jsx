@@ -36,8 +36,9 @@ class App extends React.Component {
        <h5>by Test Info</h5>
        <div>* Rating System * 91 ratings | 4 answered questions</div>
        ___________________________________________________________ <br/><br/>
-
-       Price: ${34.01} & FREE Shipping. Details & FREE Returns
+      <div>
+      Price: $<span style={{color: "red"}}>{34.01}</span> & FREE Shipping. Details & FREE Returns
+      </div>
         <br/><br/>
        Product Description:
       </div>
