@@ -19,7 +19,7 @@ class App extends React.Component {
     //console.log("This is from the get request"); 
     axios.get('/product')
     .then((response) => {
-      console.log("just added this: ", response);
+      console.log("this is from the axios request: ", response);
       this.setState({
         title: response.data
       })
@@ -34,6 +34,13 @@ class App extends React.Component {
     return (
       <div>
        <Title title={this.state.title}/>
+       <h5>Test Info</h5>
+       <div>* Rating System * 91 ratings | 4 answered questions</div>
+       ___________________________________________________________ <br/><br/>
+
+       Price: ${34.01} & FREE Shipping. Details & FREE Returns
+        <br/><br/>
+       Product Description:
       </div>
     )
   }

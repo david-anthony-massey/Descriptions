@@ -16,7 +16,7 @@ connection.connect( err => {
 });
 
 const sendProductTask = (callback) => {
-  connection.query('SELECT productName from productDescription;', (error, results) => {
+  connection.query('SELECT * from productDescription;', (error, results) => {
     //console.log("This is frome the db send product name: ", results)
     if (error) {
       callback(error);
