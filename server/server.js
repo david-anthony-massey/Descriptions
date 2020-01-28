@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, "/../client/dist")));
 
-// get request using getProductTask
+// get request using sendProductTask
 app.get('/product', function (req, res) {
   db.sendProductTask((err, results) => {
     if (err) {

@@ -16,12 +16,11 @@ class App extends React.Component {
   }
 
   getDescription () {
-    //console.log("This is from the get request"); 
     axios.get('/product')
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
-        rating: 1,
+        currentItem: {},
         title: response.data
       })
     })
@@ -31,7 +30,6 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <div>
        <Title title={this.state.title}/>

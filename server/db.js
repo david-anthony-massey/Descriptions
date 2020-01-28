@@ -9,12 +9,13 @@ var connection = mysql.createConnection({
  
 connection.connect( err => {
   if ( err ) {
-    console.log( 'This is in the db; ', err )
+    console.log( 'This is in from db connect; ', err )
   } else {
     console.log( "Connected to the Database!!!" )
   }
 });
 
+// This request sends all db data from productDescription
 const sendProductTask = (callback) => {
   connection.query('SELECT * from productDescription;', (error, results) => {
     //console.log("This is frome the db send product name: ", results)
