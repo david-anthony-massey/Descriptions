@@ -1,5 +1,6 @@
 import React from "react";
-import Title from './components/Title.jsx'
+import Title from './components/Title.jsx';
+import Description from './components/Descriptions.jsx'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -7,7 +8,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       currentItem: {},
-      title: []
+      title: [],
+      //description: []
     };
     this.getDescription = this.getDescription.bind(this);
   }
@@ -21,7 +23,8 @@ class App extends React.Component {
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
-        title: response.data
+        title: response.data,
+        //descriptions: response.data
       })
     })
     .catch(function (error) {
@@ -40,7 +43,7 @@ class App extends React.Component {
       Price: $<span style={{color: "red"}}>{34.01}</span> & FREE Shipping. Details & FREE Returns
       </div>
         <br/><br/>
-       Product Description:
+       <Description />
       </div>
     )
   }

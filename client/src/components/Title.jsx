@@ -3,7 +3,7 @@ import React from 'react';
 const Title = (props) => {
   return (
     <div>
-    Product Name
+    This is the Title component
       {props.title.map((title, index) => ( 
           <div key={index}>
             {/* {title.productName} */}
@@ -12,4 +12,5 @@ const Title = (props) => {
     </div>
   )
 }
+
  export default Title;
