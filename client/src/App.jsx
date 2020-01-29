@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 45,
+      productId: 1,
       title: [],
       description: [],
       price: []
@@ -39,14 +39,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Title  title={this.state.title}/>
-        <h5>by Test Info</h5>
-        <div>* Rating System * 91 ratings | 4 answered questions</div>
-        ___________________________________________________________ <br/><br/>
         <div>
+          <Title  title={this.state.title}/>
+        </div>
+        <hr></hr>
+        <div>
+          <br></br>
           <Price price={this.state.price}/>
         </div>
-          <br/><br/>
+        <br></br>
         <div>
           <Description description={this.state.description}/>
         </div>
