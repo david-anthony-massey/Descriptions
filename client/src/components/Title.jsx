@@ -6,7 +6,7 @@ const Title = (props) => {
     This is the Title component
       {props.title.map((title, index) => ( 
           <div key={index}>
-            {/* {title.productName} */}
+            {title.productName}
           </div>
         ))}
     </div>

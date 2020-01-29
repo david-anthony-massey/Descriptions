@@ -5,15 +5,15 @@ const Price = (props) => {
     <div>
       This is the price component <br/>
      
-      {/* {props.price.map((price, index) => ( 
+      {props.price.map((price, index) => ( 
           <div key={index}>
-            {price.price}
+            Price: $<span style={{color: "red"}}>{price.price}</span> & {<strong>Free Shipping</strong>}. Details & FREE Returns
           </div>
-        ))} */}
+        ))}
     </div>
   )
 }
 
-// Price: $<span style={{color: "red"}}>{34.01}</span> & {<strong>Free Shipping</strong>}. Details & FREE Returns
+
 
 export default Price;

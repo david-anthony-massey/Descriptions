@@ -11,8 +11,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/../client/dist")));
 
 // get request using sendProductTask
-app.get('/product', function (req, res) {
-  db.sendProductTask((err, results) => {
+app.get('/products/:productId', (req, res) => {
+  const productId = req.params.productId
+  db.sendProductTask(productId, (err, results) => {
     if (err) {
       console.log(err)
     } else {

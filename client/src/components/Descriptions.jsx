@@ -6,7 +6,7 @@ const Description = (props) => {
       This is the description component
       {props.description.map((description, index) => ( 
           <div key={index}>
-            {/* {description.productDescription} */}
+            {description.productDescription}
           </div>
         ))}
     </div>

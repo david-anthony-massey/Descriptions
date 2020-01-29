@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentItem: {},
+      productId: 45,
       title: [],
       description: [],
       price: []
@@ -22,7 +22,7 @@ class App extends React.Component {
 
   // GET request for product info from the db
   getDescriptionInfo () {
-    axios.get('/product')
+    axios.get(`/products/${this.state.productId}`)
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
@@ -39,7 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Title title={this.state.title}/>
+        <Title  title={this.state.title}/>
         <h5>by Test Info</h5>
         <div>* Rating System * 91 ratings | 4 answered questions</div>
         ___________________________________________________________ <br/><br/>
