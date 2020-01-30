@@ -8,6 +8,7 @@ const Description = (props) => {
             {description.productDescription}
           </div>
         ))}
+      <hr></hr>  
     </div>
   )
 }

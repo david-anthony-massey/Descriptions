@@ -8,7 +8,7 @@ const Title = (props) => {
             {title.productName}
           </div>
         ))}
-      <h5>by Test Info</h5>
+      <h6>by Test Info</h6>
       <div>* Rating System * 91 ratings | 4 answered questions</div>
     </div>
   )
