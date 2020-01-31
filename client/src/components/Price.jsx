@@ -2,7 +2,7 @@ import React from 'react';
 
 const Price = (props) => {
   return (
-    <div>
+    <div id="price" class="a-section a-spacing-small">
       {props.price.map((price, index) => ( 
           <div key={index}>
             Price: $<span style={{color: "red"}}>{price.price}</span> & {<strong>Free Shipping</strong>}. 

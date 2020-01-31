@@ -1,33 +1,35 @@
-import React from 'react';
-import StarRatingComponent from 'react-star-rating-component';
+// import React from 'react';
+// import StarRatingComponent from 'react-star-rating-component';
  
-class Star extends React.Component {
-  constructor(props) {
-    super(props);
+// class Rating extends React.Component {
+//   constructor(props) {
+//     super(props);
  
-    this.state = {
-      rating: 1
-    };
-  }
+//     this.state = {
+//       rating: props.rating
+//     };
+//   }
  
-  onStarClick(nextValue, prevValue, name) {
-    this.setState({rating: nextValue});
-  }
+//   onStarClick(nextValue, prevValue, name) {
+//     this.setState({rating: nextValue});
+//   }
  
-  render() {
-    const { rating } = this.state;
+//   render() {
+//     const { rating } = this.state;
     
-    return (                
-      <div>
-        <StarRatingComponent 
-          name="rate1" 
-          starCount={10}
-          value={rating}
-          onStarClick={this.onStarClick.bind(this)}
-        />
-      </div>
-    );
-  }
-}
+//     return (                
+//       <div>
+//         <div>
+//         <StarRatingComponent 
+//           name="rate" 
+//           starCount={5}
+//           value={this.state.rating}
+//           onStarClick={this.onStarClick.bind(this)}
+//         /> 91 ratings | 4 answered questions
+//         </div>
+//       </div>
+//     );
+//   }
+// }
 
-export default Star;
+// export default Rating;
