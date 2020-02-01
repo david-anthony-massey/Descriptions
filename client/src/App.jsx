@@ -1,27 +1,35 @@
 import React from "react";
-import Title from './components/Title.jsx'
+import Title from './components/Title.jsx';
+import Description from './components/Descriptions.jsx';
+import Price from './components/Price.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: []
+      productId: 69,
+      title: [],
+      description: [],
+      price: [],
+      rating: []
     };
-    this.getDescription = this.getDescription.bind(this);
+    this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
 
   componentDidMount() {
-    this.getDescription()
+    this.getDescriptionInfo()
   }
 
-  getDescription () {
-    axios.get('/product')
+  // GET request for product info from the db
+  getDescriptionInfo () {
+    axios.get(`/products/${this.state.productId}`)
     .then((response) => {
       console.log("this is from the axios request: ", response);
       this.setState({
-        currentItem: {},
-        title: response.data
+        title: response.data,
+        description: response.data,
+        price: response.data
       })
     })
     .catch(function (error) {
@@ -32,15 +40,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
-       <Title title={this.state.title}/>
-       <h5>by Test Info</h5>
-       <div>* Rating System * 91 ratings | 4 answered questions</div>
-       ___________________________________________________________ <br/><br/>
-      <div>
-      Price: $<span style={{color: "red"}}>{34.01}</span> & FREE Shipping. Details & FREE Returns
-      </div>
-        <br/><br/>
-       Product Description:
+        <div>
+          <Title  title={this.state.title}/>
+        </div>
+        <hr></hr>
+        <div>
+          <br></br>
+          <Price price={this.state.price}/>
+        </div>
+        <br></br>
+        <div>
+          <Description description={this.state.description}/>
+        </div>
       </div>
     )
   }

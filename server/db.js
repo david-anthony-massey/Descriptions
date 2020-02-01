@@ -16,9 +16,9 @@ connection.connect( err => {
 });
 
 // This request sends all db data from productDescription
-const sendProductTask = (callback) => {
-  connection.query('SELECT * from productDescription;', (error, results) => {
-    //console.log("This is frome the db send product name: ", results)
+const sendProductTask = (productId, callback) => {
+  connection.query(`SELECT * FROM productDescription WHERE product_Id = ('${productId}');`, (error, results) => {
+    console.log("This is from the db send product name: ", results)
     if (error) {
       callback(error);
     } else {

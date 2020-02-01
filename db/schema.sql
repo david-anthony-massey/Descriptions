@@ -25,7 +25,7 @@ CREATE TABLE productDescription (
   product_Id int,
   productName VARCHAR(255),
   productDescription text,
-  price int,
+  price FLOAT,
   category_id int,
   imgUrls text
 );
