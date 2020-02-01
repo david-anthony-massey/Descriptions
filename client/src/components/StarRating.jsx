@@ -1,12 +1,12 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
  
-class Star extends React.Component {
+class Rating extends React.Component {
   constructor(props) {
     super(props);
  
     this.state = {
-      rating: 1
+      rating: props.rating // this represents the initial state/number of stars the page will show 
     };
   }
  
@@ -15,19 +15,21 @@ class Star extends React.Component {
   }
  
   render() {
-    const { rating } = this.state;
+    const { rating } = this.state; // This will show the current number of stars
     
     return (                
       <div>
+        <span class="a-icon a-icon-star">
         <StarRatingComponent 
-          name="rate1" 
-          starCount={10}
+          name="rate" 
+          starCount={5}     
           value={rating}
-          onStarClick={this.onStarClick.bind(this)}
-        />
+          onStarClick={this.onStarClick.bind(this)} 
+        /> <span class="ratings">91 ratings | 4 answered questions</span>
+        </span> 
       </div>
     );
   }
 }
 
-export default Star;
+export default Rating;
