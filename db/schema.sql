@@ -133,3 +133,4 @@ VALUES
   (100, "Peameal Bacon", 'Back bacon is a traditional British style of round, lean bacon cut from the pork loin. Canadian bacon, or peameal bacon, is back bacon rolled in cornmeal.', 8.49, 6,"https://assets.shop.loblaws.ca/products_jpeg/20133609/en/20133609_lrg_1_@1x.jpg"),
   (101, "Ketchup Flavour Chips", "One Large Bag Authentic, Delicious, and Fresh Ketchup Chips imported from Canada and delivered to your door! Quality and Freshness guaranteed. Expiration date clearly labelled and guaranteed to be shipped with valid expiry date or your money back. Bold, and full of rich flavor Crunchy Snack time delight", 10.97, 6,"https://images-na.ssl-images-amazon.com/images/I/516JRvnx2RL.jpg"),
   (102, "Poutine Gravy", "St Hubert Poutine Gravy mix is a delicious sauce which is used to make the famous Canadian dish Poutine.", 6.27, 6,'https://images-na.ssl-images-amazon.com/images/I/41PKB0cxLyL.jpg');
+//
