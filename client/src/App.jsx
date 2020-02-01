@@ -11,7 +11,8 @@ class App extends React.Component {
       productId: 69,
       title: [],
       description: [],
-      price: []
+      price: [],
+      rating: []
     };
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }

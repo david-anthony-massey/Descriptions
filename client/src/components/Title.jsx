@@ -1,5 +1,5 @@
 import React from 'react';
-import StarRatingComponent from 'react-star-rating-component';
+import Rating from './StarRating';
 
 const Title = (props) => {
   return (
@@ -10,7 +10,7 @@ const Title = (props) => {
           </div>
         ))}
       <h6>by Test Info</h6>
-      <div>* Rating * 91 ratings | 4 answered questions</div>
+    <Rating /> 
     </div>
   )
 }
