@@ -8,11 +8,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 32,
+      productId: 40,
       title: [],
       description: [],
       price: [],
-      rating: []
+      rating: 5
     };
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
@@ -41,7 +41,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <Title  title={this.state.title}/>
+          <Title title={this.state.title}/>
         </div>
         <hr></hr>
         <div>

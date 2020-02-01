@@ -6,7 +6,7 @@ class Rating extends React.Component {
     super(props);
  
     this.state = {
-      rating: props.rating // this represents the initial state/number of stars the page will show 
+      rating: 4 // this represents the initial state/number of stars the page will show 
     };
   }
  
