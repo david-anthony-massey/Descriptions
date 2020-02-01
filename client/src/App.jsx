@@ -8,11 +8,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 40,
+      productId: 78,
       title: [],
       description: [],
       price: [],
-      rating: 5
+      rating: []
     };
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
@@ -47,6 +47,7 @@ class App extends React.Component {
         <div>
           <br></br>
           <Price price={this.state.price}/>
+          <a class="hover" href="#">Thank you for being a Prime member. Get $70 off instantly: pay $0.00 upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</a>
         </div>
         <br></br>
         <div>

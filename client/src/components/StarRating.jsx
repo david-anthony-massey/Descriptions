@@ -25,7 +25,7 @@ class Rating extends React.Component {
           starCount={5}     
           value={rating}
           onStarClick={this.onStarClick.bind(this)} 
-        /> <span class="ratings">91 ratings | 4 answered questions</span>
+        /> <span class="ratings"> {rating} ratings | 4 answered questions</span>
         </span> 
       </div>
     );

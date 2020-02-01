@@ -10,7 +10,7 @@ const Price = (props) => {
             <td class="a-span12">
               <span id="priceblock_ourprice" class="a-size-medium a-color-price priceBlockBuyingPriceString">
                 {props.price.map((price, index) => ( 
-                <span key={index}>${price.price} </span> 
+                <span key={price.id}>${price.price} </span> 
                 ))} </span>
                 <span id="oourprice_shippingmessage">
                   <span>
