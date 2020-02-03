@@ -47,7 +47,7 @@ class App extends React.Component {
         <div>
           <br></br>
           <Price price={this.state.price}/>
-          <a class="hover" href="#">Thank you for being a Prime member. Get $70 off instantly: pay $0.00 upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</a>
+          <a className="hover" href="#">Thank you for being a Prime member. Get $70 off instantly: pay $0.00 upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</a>
         </div>
         <br></br>
         <div>

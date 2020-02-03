@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Run index.js when the container launches
-CMD ["node", "server/index.js"] 
+CMD ["node", "server/server.js"] 
