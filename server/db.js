@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
  
 connection.connect( err => {
   if ( err ) {
-    console.log( 'This is in from db connect; ', err )
+    console.log( 'Connection error from the db.js file: ', err )
   } else {
     console.log( "Connected to the Database!!!" )
   }
@@ -19,7 +19,7 @@ connection.connect( err => {
 // This request sends all db data from productDescription
 const sendProductTask = (productId, callback) => {
   connection.query(`SELECT * FROM productDescription WHERE product_Id = ('${productId}');`, (error, results) => {
-    console.log("This is from the db send product name: ", results)
+    console.log("This is from the db query: ", results)
     if (error) {
       callback(error);
     } else {

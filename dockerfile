@@ -16,5 +16,5 @@ COPY . .
 # Make port 8081 available to the world outside this container
 EXPOSE 8081
 
-# Run index.js when the container launches
+# Run server.js when the container launches
 CMD ["node", "server/server.js"] 
