@@ -11,7 +11,7 @@ const Title = (props) => {
           </div>
         ))}
         </div>
-      <div className="company-line"><h6>by <a href="#">Company Name test</a></h6></div>
+      <div className="company-line"><h6>by <a href="#">Company Name test 2</a></h6></div>
     <Rating /> 
     </div>
   )
