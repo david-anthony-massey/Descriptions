@@ -4,12 +4,14 @@ import Rating from './StarRating';
 const Title = (props) => {
   return (
     <div>
+      <div>
       {props.title.map((title, index) => ( 
-          <div key={index}>
+          <div key={title.id}>
             <h1 id="tittle" class="a-size-large a-spacing-none" >{title.productName}</h1>
           </div>
         ))}
-      <h6>by Test Info</h6>
+        </div>
+      <div className="company-line"><h6>by <a href="#">Company Name</a></h6></div>
     <Rating /> 
     </div>
   )

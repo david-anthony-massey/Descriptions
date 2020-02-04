@@ -4,7 +4,7 @@ const Description = (props) => {
   return (
     <div>
       {props.description.map((description, index) => ( 
-          <div key={index}>
+          <div key={description.id}>
             {description.productDescription}
           </div>
         ))}
