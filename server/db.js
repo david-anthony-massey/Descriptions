@@ -1,10 +1,11 @@
 var mysql      = require('mysql');
 
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
+  host     : 'fec-product-description.c4pmomvbjj0u.us-east-2.rds.amazonaws.com',
+  user     : 'admin',
   password : 'password',
-  database : 'FECDescription'
+  database : 'FECDescription',
+  port: 3306
 });
  
 connection.connect( err => {
