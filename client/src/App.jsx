@@ -30,7 +30,7 @@ class App extends React.Component {
         title: response.data,
         description: response.data,
         price: response.data,
-        rating: response.data
+        ratings: response.data
       })
     })
     .catch(function (error) {
@@ -38,11 +38,12 @@ class App extends React.Component {
     });
   }
 
+  
   render() {
     return (
       <div>
         <div>
-          <Title title={this.state.title} rating={this.state.rating}/>
+          <Title title={this.state.title} ratings={this.state.ratings}/>
         </div>
         <hr></hr>
         <div>

@@ -2,13 +2,13 @@ import React from 'react';
 
 const Price = (props) => {
   return (
-    <div id="price" class="a-section a-spacing-small">
-      <table class="a-lineitem">
+    <div id="price" className="a-section a-spacing-small">
+      <table className="a-lineitem">
         <tbody>
           <tr id="priceblock_ourprice-row">
-            <td id="priceblock_ourprice_lbl" class="a-color-secondary a-size-base a-text-right a-nowrap">Price: </td>
-            <td class="a-span12">
-              <span id="priceblock_ourprice" class="a-size-medium a-color-price priceBlockBuyingPriceString">
+            <td id="priceblock_ourprice_lbl" className="a-color-secondary a-size-base a-text-right a-nowrap">Price: </td>
+            <td className="a-span12">
+              <span id="priceblock_ourprice" className="a-size-medium a-color-price priceBlockBuyingPriceString">
                 {props.price.map((price, index) => ( 
                 <span key={price.id}>${price.price} </span> 
                 ))} </span>

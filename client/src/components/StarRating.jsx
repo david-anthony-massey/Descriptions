@@ -6,7 +6,7 @@ class Rating extends React.Component {
     super(props);
  
     this.state = {
-      rating: 4 // this represents the initial state/number of stars the page will show 
+      //rating: 4 // this represents the initial state/number of stars the page will show 
     };
   }
  
@@ -34,7 +34,7 @@ class Rating extends React.Component {
           starCount={5}     
           value={rating}
           onStarClick={this.onStarClick.bind(this)} 
-        /> <span class="ratings"> </span>
+        /> <span className="ratings"> </span>
         </span> 
       </div>
     );
