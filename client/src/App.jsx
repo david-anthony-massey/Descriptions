@@ -12,7 +12,7 @@ class App extends React.Component {
       title: [],
       description: [],
       price: [],
-      rating: []
+      ratings: []
     };
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
@@ -29,7 +29,8 @@ class App extends React.Component {
       this.setState({
         title: response.data,
         description: response.data,
-        price: response.data
+        price: response.data,
+        rating: response.data
       })
     })
     .catch(function (error) {
@@ -41,7 +42,7 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <Title title={this.state.title}/>
+          <Title title={this.state.title} rating={this.state.rating}/>
         </div>
         <hr></hr>
         <div>

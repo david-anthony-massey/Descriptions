@@ -1,7 +1,9 @@
 import React from 'react';
 import Rating from './StarRating';
+// import LeafRating from './StarRating2';
 
 const Title = (props) => {
+  
   return (
     <div>
       <div>
@@ -12,7 +14,7 @@ const Title = (props) => {
         ))}
         </div>
       <div className="company-line"><h6>by <a href="#">Company Name</a></h6></div>
-    <Rating /> 
+      <Rating /> 
     </div>
   )
 }
