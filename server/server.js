@@ -8,6 +8,8 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+// This line is necessary to render React files
 app.use(express.static(path.join(__dirname, "/../client/dist")));
 
 // get request using sendProductTask

@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "royolivarez/productdescription:latest"
+    "Name": "royolivarez/productdescription"
   },
   "Ports": [
     {
