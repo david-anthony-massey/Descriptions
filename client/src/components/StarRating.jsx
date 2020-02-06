@@ -10,12 +10,13 @@ class Rating extends React.Component {
     };
   }
  
+  // onStarClick isn't workng. I need to refactor
   onStarClick(nextValue, prevValue, name) {
     this.setState({rating: nextValue});
   }
  
   render() {
-    const { rating } = this.state; // This will show the current number of stars
+    const { rating } = this.state; // This will show the current number of stars?
     
     return (                
       <div>
@@ -40,5 +41,6 @@ class Rating extends React.Component {
     );
   }
 }
+
 
 export default Rating;

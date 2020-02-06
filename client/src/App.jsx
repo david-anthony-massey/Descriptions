@@ -17,15 +17,16 @@ class App extends React.Component {
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
 
+  
   componentDidMount() {
     this.getDescriptionInfo()
   }
 
   // GET request for product info from the db
   getDescriptionInfo () {
-    axios.get(`/products/${this.state.productId}`)
+    axios.get(`http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/products/${this.state.productId}`) // is this correct?
     .then((response) => {
-      console.log("this is from the axios request: ", response);
+      // console.log("this is from the axios request: ", response);
       this.setState({
         title: response.data,
         description: response.data,
@@ -38,7 +39,7 @@ class App extends React.Component {
     });
   }
 
-  
+  // renders three components, Title, Price, and Description
   render() {
     return (
       <div>

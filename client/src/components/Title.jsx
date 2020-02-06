@@ -3,7 +3,9 @@ import Rating from './StarRating';
 import LeafRating from './StarRating2';
 
 const Title = (props) => { 
-  
+  // maps over title prop and returns the productName from the db
+  // imports Rating component 
+
   return (
     <div>
       <div>
@@ -20,4 +22,5 @@ const Title = (props) => {
   )
 }
 
+// needed to export Title to App
  export default Title;

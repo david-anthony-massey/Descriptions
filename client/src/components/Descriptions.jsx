@@ -1,5 +1,6 @@
 import React from 'react';
 
+// maps over descrition prop and returns the product description 
 const Description = (props) => {
   return (
     <div>
@@ -7,8 +8,7 @@ const Description = (props) => {
           <div key={description.id}>
             {description.productDescription}
           </div>
-        ))}
-      <hr></hr>  
+        ))} 
     </div>
   )
 }
