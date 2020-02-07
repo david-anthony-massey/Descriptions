@@ -10,16 +10,16 @@ const Price = (props) => {
             <td className="a-span12">
               <span id="priceblock_ourprice" className="a-size-medium a-color-price priceBlockBuyingPriceString">
                 {props.price.map((price, index) => ( 
-                <span key={price.id}>${price.price} </span> 
+                <span key={price.id}>${price.price.toFixed(2)}</span>
                 ))} </span>
                 <span id="oourprice_shippingmessage">
                   <span>
                     & {<strong>Free Shipping</strong>}. 
-                    <a href="#" title="FREE Next Day Pickup" data-toggle="popover" data-placement="bottom" 
+                    <a href="#FreeShipping" title="FREE Next Day Pickup" data-toggle="popover" data-placement="bottom" 
                     data-content="Free Next Day Pickup on qualifying orders. See shipping options in checkout."> Details</a> & 
                   </span>
                   <span>
-                    <a href="#" title="Return this item for free" data-toggle="popover" data-placement="bottom" 
+                    <a href="#FreeReturns" title="Return this item for free" data-toggle="popover" data-placement="bottom" 
                     data-content="You can return this item for any reason and get a full refund: no shipping charges. 
                     The item must be returned in new and unused condition"> Free Returns</a>
                   </span>

@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: 77,
+      productId: [1],
       title: [],
       description: [],
       price: [],
@@ -19,7 +19,19 @@ class App extends React.Component {
 
   
   componentDidMount() {
+    // axios function
     this.getDescriptionInfo()
+
+    // Event Listener for product ID
+    window.addEventListener('click', (event) => {
+      if (event.target.getAttribute('data-id') && event.target.getAttribute('data-id') !== this.state.productId && !isNaN(event.target.getAttribute('data-id'))) {
+        this.setState({ productId: [event.target.getAttribute('data-id')] }, () => {  
+          this.getDescriptionInfo();
+          console.log("This is from the event PD listener: ", this.state.productId)
+        });
+      }
+    });
+
   }
 
   // GET request for product info from the db
@@ -50,12 +62,13 @@ class App extends React.Component {
         <div>
           <br></br>
           <Price price={this.state.price}/>
-          <a className="hover" href="#">Thank you for being a Prime member. Get $70 off instantly: pay $0.00 upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</a>
+          <a className="hover" href="#Company">Thank you for being a Prime member. Get $70 off instantly: pay $0.00 upon approval for the Amazon Prime Rewards Visa Card. No annual fee.</a>
         </div>
         <br></br>
         <div>
           <Description description={this.state.description}/>
         </div>
+        <hr></hr>
       </div>
     )
   }

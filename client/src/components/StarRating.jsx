@@ -25,7 +25,7 @@ class Rating extends React.Component {
            renderStarIcon={() => 
           <span>
             <img
-              src="../images/full_leaf.png" 
+              src="http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/images/full_leaf.png" 
               width="30"
               height="35"
               style={{ verticalAlign: "middle" }}
