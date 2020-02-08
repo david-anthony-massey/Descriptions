@@ -1,6 +1,4 @@
 import React from 'react';
-import Rating from './StarRating';
-
 
 const Title = (props) => { 
   // maps over title prop and returns the productName from the db
@@ -15,12 +13,10 @@ const Title = (props) => {
           </div>
         ))}
         </div>
-      <div className="company-line"><h6>by <a href="#Company">Company Name</a></h6></div>
-      <Rating /> 
-     
+      <div className="company-line"><h6>by <a href="#Company">Company Name</a></h6></div>  
     </div>
   )
 }
 
-// needed to export Title to App
+
  export default Title;

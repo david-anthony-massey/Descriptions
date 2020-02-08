@@ -3,60 +3,65 @@ import Title from './components/Title.jsx';
 import Description from './components/Descriptions.jsx';
 import Price from './components/Price.jsx';
 import axios from 'axios';
+import Rating2 from "./components/StarRating2.jsx";
+
+
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productId: [1],
+      productId: [3],
       title: [],
       description: [],
       price: [],
-      ratings: []
+      ratings: 0
     };
     this.getDescriptionInfo = this.getDescriptionInfo.bind(this);
   }
 
-  
   componentDidMount() {
     // axios function
     this.getDescriptionInfo()
-
-    // Event Listener for product ID
+    
+    // Event Listener that updates the product ID for my component
     window.addEventListener('click', (event) => {
       if (event.target.getAttribute('data-id') && event.target.getAttribute('data-id') !== this.state.productId && !isNaN(event.target.getAttribute('data-id'))) {
         this.setState({ productId: [event.target.getAttribute('data-id')] }, () => {  
           this.getDescriptionInfo();
-          console.log("This is from the event PD listener: ", this.state.productId)
         });
       }
     });
-
+    
   }
-
+  
   // GET request for product info from the db
   getDescriptionInfo () {
-    axios.get(`http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/products/${this.state.productId}`) // is this correct?
+    axios.get(`http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/products/${this.state.productId}`) 
     .then((response) => {
-      // console.log("this is from the axios request: ", response);
       this.setState({
+        // I need to refactor these request to pull specific information for title, description, and price
         title: response.data,
         description: response.data,
-        price: response.data,
-        ratings: response.data
+        price: response.data, 
+        ratings: response.data[0].rating
       })
     })
     .catch(function (error) {
       console.log(error);
     });
   }
-
-  // renders three components, Title, Price, and Description
+  
+  // renders four components, Title, Price, Rating2 and Description
   render() {
     return (
       <div>
         <div>
-          <Title title={this.state.title} ratings={this.state.ratings}/>
+          <Title title={this.state.title} />
+          <Rating2 ratings={this.state.ratings} productId={this.state.productId}/>
+        </div>
+        <div>
         </div>
         <hr></hr>
         <div>
