@@ -2,13 +2,15 @@ import React from 'react';
 
 // maps over descrition prop and returns the product description 
 const Description = (props) => {
-  return (
+  let text = props.description[0]
+  // console.log(text)circle back later?
+  return ( 
     <div>
       {props.description.map((description, index) => ( 
           <div key={description.id}>
-            {description.productDescription}
+            <li>{description.productDescription}</li> 
           </div>
-        ))} 
+        ))}  
     </div>
   )
 }

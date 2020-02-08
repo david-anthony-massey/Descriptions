@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from './StarRating';
+//import Rating from './StarRating';
 
 
 const Title = (props) => { 
@@ -16,8 +16,8 @@ const Title = (props) => {
         ))}
         </div>
       <div className="company-line"><h6>by <a href="#Company">Company Name</a></h6></div>
-      <Rating /> 
-     
+      {/* <Rating />  */}
+    
     </div>
   )
 }
