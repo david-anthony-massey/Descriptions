@@ -7,13 +7,13 @@ function Rating2({ratings, productId}) {
   let image = '';
   for (let i = 1; i < 6; i++) {
      if (i <= ratings) {
-      image = '../images/full_leaf.png'; 
+      image = 'http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/images/full_leaf.png'; 
     } else if (i - ratings <= 0.25) {
-      image = '../images/full_leaf.png';
+      image = 'http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/images/full_leaf.png';
     } else if (i - ratings > 0.25 && i - ratings < 0.75) {
-      image = '../images/half_leaf.png';
+      image = 'http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/images/half_leaf.png';
     } else {
-      image = '../images/empty_leaf.png';
+      image = 'http://descriptions-env.62m3r6bcww.us-east-2.elasticbeanstalk.com/images/empty_leaf.png';
     }
 
     rating.push(
