@@ -22,7 +22,6 @@ function Rating2({ratings, productId}) {
         src={image}
         alt="Leaf"
         id={productId}
-        // onClick={{rating}}
         height="27px"
         width="27px"
       />,
@@ -30,9 +29,7 @@ function Rating2({ratings, productId}) {
   }
 
   return (
-
     <div>
-
       {rating}
     </div>
   );
