@@ -10,11 +10,11 @@ const Description = (props) => {
         </b> Choose delivery options in checkout.
       </div>
       <div className="support">
-        <a href="#support" title="What's Product Support" data-toggle="popover" data-placement="bottom" 
+        <a href="#support" title="What's Product Support?" data-toggle="popover" data-placement="bottom" 
            data-content="In the event your product doesn’t work as expected, or you’d like someone to walk you through set-up, Amazon offers free product support over the phone on eligible purchases for up to 90 days.
            To access this option, go to Your Orders and choose Get product support.">Free Saskatchewanazon product support included</a>
       </div>
-
+     
       {props.description.map((description, index) => ( 
           <div key={description.id}>
             <li>{description.productDescription}</li>
@@ -24,6 +24,7 @@ const Description = (props) => {
             <li>{description.productDescription}</li> */}
           </div>
         ))} 
+       
        <div className="compare">
           <a href="#Compare">Compare with similar items</a>
        </div> 
