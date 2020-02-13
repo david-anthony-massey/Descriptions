@@ -1,0 +1,147 @@
+body {
+  background-color: white;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+  /* width: 500px; */
+  /* position: static; */
+}
+
+.a-size-large {
+  text-rendering: optimizeLegibility;
+}
+
+.a-size-large {
+  font-size: 21px!important;
+  line-height: 1.3!important;
+}
+
+.a-spacing-none, .a-ws .a-ws-spacing-none {
+  margin-bottom: 0!important;
+}
+
+.a-spacing-small, .a-ws .a-ws-spacing-small {
+  margin-bottom: 10px!important;
+}
+
+.a-size-medium {
+  text-rendering: optimizeLegibility;
+  font-size: 17px!important;
+  line-height: 1.255!important;
+}
+
+.a-nowrap, .aok-nowrap {
+  white-space: nowrap;
+}
+
+.a-size-base {
+  font-size: 13px!important;
+  line-height: 19px!important;
+}
+
+.a-text-right {
+  text-align: right!important;
+}
+
+.a-color-secondary {
+  color: #555!important;
+}
+
+.a-color-price {
+  color:  #DB552D!important;
+}
+
+.ratings {
+  position: relative;
+  bottom: 12px;
+  
+}
+
+.company-line {
+  position: relative;
+  bottom: -3px;
+}
+
+a:hover {
+  color: #DB552D;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table.a-lineitem td:first-child, table.a-lineitem th:first-child {
+  padding-left: 0;
+}
+
+table.a-lineitem td, table.a-lineitem th {
+  padding: 0 3px;
+}
+
+td, th {
+  vertical-align: top;
+}
+
+td.a-span12, th.a-span12 {
+  width: 104.93%;
+  float: none!important;
+}
+
+.popover.fade.bs-popover-bottom.show {
+  display: block;
+}
+
+#productDescription {
+  margin: 40px 20px 20px 20px;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+.valentines {
+  margin-bottom: 20px;
+}
+
+.compare {
+  margin-top: 20px;
+}
+
+.choice{
+  margin-bottom: 20px;
+}
+
+.support {
+  margin-bottom: 10px;
+}
+
+/* .ellipses {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+/* .ellipses:hover {
+  overflow: visible
+  ;
+} */
