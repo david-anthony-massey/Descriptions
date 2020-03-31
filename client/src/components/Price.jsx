@@ -22,7 +22,7 @@ const Price = props => {
                 className="a-size-medium a-color-price priceBlockBuyingPriceString"
               >
                 {props.price.map((price, index) => (
-                  <span key={price.id}>${price.price.toFixed(2)}</span>
+                  <span key={index}>${price.toFixed(2)}</span>
                 ))}{" "}
               </span>
               <span id="oourprice_shippingmessage">
