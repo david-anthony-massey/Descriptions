@@ -52,7 +52,7 @@ class App extends React.Component {
           title: response.data[0].name,
           description: response.data[0].DESCRIPTION,
           price: response.data[0].price,
-          ratings: response.data[1].rating
+          ratings: response.data[1]["AVG(rating)"].
         });
       })
       .catch(function(error) {

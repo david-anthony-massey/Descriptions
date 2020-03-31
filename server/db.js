@@ -31,8 +31,8 @@ const sendProductTask = (productId, callback) => {
             if (err) {
               callback(err);
             } else {
-              data.rating = data2;
-              callback(null, data);
+              data3 = [data, data2];
+              callback(null, data3);
             }
           }
         );
