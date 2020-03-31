@@ -51,7 +51,7 @@ class App extends React.Component {
           title: response.data.name,
           description: response.data.DESCRIPTION,
           price: response.data.price,
-          ratings: response.data[0].rating
+          ratings: response.data.rating
         });
       })
       .catch(function(error) {
