@@ -26,7 +26,7 @@ const sendProductTask = (productId, callback) => {
         callback(error);
       } else {
         connection.query(
-          `SELECT AVG(rating) FROM Reviews WHERE product_id="${productID}"`,
+          `SELECT AVG(rating) FROM Reviews WHERE product_id="${productId}"`,
           (err, data2) => {
             console.log("This is from the db query: ", results);
             if (err) {
