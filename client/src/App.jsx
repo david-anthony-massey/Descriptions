@@ -48,9 +48,9 @@ class App extends React.Component {
       .then(response => {
         this.setState({
           // I need to refactor these request to pull specific information for title, description, and price
-          title: response.data,
-          description: response.data,
-          price: response.data,
+          title: response.data.name,
+          description: response.data.DESCRIPTION,
+          price: response.data.price,
           ratings: response.data[0].rating
         });
       })
