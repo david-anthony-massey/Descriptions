@@ -54,6 +54,7 @@ class App extends React.Component {
           price: response.data[0].price,
           ratings: response.data[1]["AVG(rating)"]
         });
+        console.log(this.state.title, this.state.ratings);
       })
       .catch(function(error) {
         console.log(error);
