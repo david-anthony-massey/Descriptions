@@ -43,7 +43,7 @@ class App extends React.Component {
   getDescriptionInfo() {
     axios
       .get(
-        `https://saskatchewanazon-descriptions.herokuapp.com/products/${this.state.productId}`
+        `https://saskatchewanazon-description.herokuapp.com/products/${this.state.productId}`
       )
       .then(response => {
         this.setState({

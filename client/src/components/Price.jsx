@@ -5,7 +5,7 @@ const Price = props => {
     <div id="price" className="a-section a-spacing-small">
       <img
         className="choice"
-        src="https://saskatchewanazon-descriptions.herokuapp.com/images/amazonchoice.png"
+        src="https://saskatchewanazon-description.herokuapp.com/images/amazonchoice.png"
       ></img>
       <table className="a-lineitem">
         <tbody>

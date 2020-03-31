@@ -8,16 +8,16 @@ function Rating2({ ratings, productId }) {
   for (let i = 1; i < 6; i++) {
     if (i <= ratings) {
       image =
-        "https://saskatchewanazon-descriptions.herokuapp.com/images/full_leaf.png";
+        "https://saskatchewanazon-description.herokuapp.com/images/full_leaf.png";
     } else if (i - ratings <= 0.25) {
       image =
-        "https://saskatchewanazon-descriptions.herokuapp.com/images/full_leaf.png";
+        "https://saskatchewanazon-description.herokuapp.com/images/full_leaf.png";
     } else if (i - ratings > 0.25 && i - ratings < 0.75) {
       image =
-        "https://saskatchewanazon-descriptions.herokuapp.com/images/half_leaf.png";
+        "https://saskatchewanazon-description.herokuapp.com/images/half_leaf.png";
     } else {
       image =
-        "https://saskatchewanazon-descriptions.herokuapp.com/images/empty_leaf.png";
+        "https://saskatchewanazon-description.herokuapp.com/images/empty_leaf.png";
     }
 
     rating.push(
