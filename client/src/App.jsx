@@ -46,6 +46,7 @@ class App extends React.Component {
         `https://saskatchewanazon-description.herokuapp.com/products/${this.state.productId}`
       )
       .then(response => {
+        console.log(response.data);
         this.setState({
           // I need to refactor these request to pull specific information for title, description, and price
           title: response.data[0].name,
